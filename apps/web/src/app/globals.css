@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #0a0a1a;
+  --bg-secondary: #0f0f2e;
+  --bg-tertiary: #1a1a3e;
+  --accent-purple: #7c3aed;
+  --accent-purple-light: #9470ff;
+  --accent-gold: #f59e0b;
+  --accent-gold-light: #fbbf24;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --border-subtle: rgba(124, 58, 237, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: Inter, system-ui, sans-serif;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-stellar-purple-500 hover:bg-stellar-purple-400 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply border border-stellar-gold-500 hover:bg-stellar-gold-500/10 text-stellar-gold-400 font-semibold px-6 py-3 rounded-lg transition-colors duration-200;
+  }
+
+  .card-space {
+    @apply bg-space-800 border border-stellar-purple-800/40 rounded-xl p-6;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #9470ff 0%, #fbbf24 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
